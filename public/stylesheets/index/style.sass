@@ -1,0 +1,429 @@
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+$color0: #ff2670
+$color1: white
+$width0: 330px
+$width3: 100%
+$width4: 50px
+$height5: 50px
+
+
+
+.panel.suivi-gps
+    display: inline-flex
+    justify-content: space-around
+    flex-wrap: wrap
+    background: transparent
+    padding-left: 0
+
+    button:focus
+        outline: none
+
+    button:hover
+        opacity: .8
+
+    .fa
+        font-size: 20px
+
+    .fa-info
+        color: white
+
+    .panel-filtre
+        width: 25%
+        display: -webkit-box
+
+    .card
+        width: auto
+        min-width: 290px
+        max-width: 380px
+        background: white
+        position: relative
+        display: flex
+        display: -webkit-box
+        display: -moz-box
+        display: -webkit-flexbox
+        display: -ms-flexbox
+        display: -webkit-flex
+        -webkit-box-orient: vertical
+        -moz-box-orient: vertical
+        -webkit-box-direction: normal
+        -moz-box-direction: normal
+        -webkit-flex-direction: column
+        -ms-flex-direction: column
+        flex-direction: column
+        -webkit-box-flex: 1
+        -moz-box-flex: 1
+        -webkit-flex: 1 1
+        -ms-flex: 1 1
+        flex: 1 1
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.25)
+        border-radius(50px)
+        padding: 2
+        margin: 10px
+
+        h2
+            margin: 0
+            padding: 20px
+            color: white
+            background: #3E4FB2
+            font-weight: 300
+            text-align: center
+            font-size: 18px
+            font-family: 'Roboto', sans-serif
+
+
+        .img-wrapper
+            padding: 0
+            position: relative
+
+            :before
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                right: 0
+                bottom: 0
+                background: rgba(0, 0, 0,0)
+                width: 100%
+                z-index: 1
+
+            &:after
+                content: ""
+                position: absolute
+                left: 0
+                right: 0
+                bottom: 0
+                background: rgba(0, 0, 0,0)
+                width: 100%
+                height: 40px
+                z-index: 0
+                // background: linear-gradient(to top, rgba(0,0,0,0.70) 0%,rgba(0,0,0,0) 100%)
+
+            img
+                width: 100%
+                height: 180px
+                -o-object-fit: cover
+                object-fit: cover
+                margin: 0
+                display: block
+                position: relative
+
+            .img
+                width: 100%
+                height: 180px
+                -o-object-fit: cover
+                object-fit: cover
+                margin: 0
+                display: block
+                position: relative
+
+            .card-author
+                color: white
+                font-family: 'Roboto', sans-serif
+                font-size: 20px
+                position: absolute
+                z-index: 2
+                padding: 10px
+                WIDTH: auto
+                Height: Auto
+                // background: -moz-linear-gradient(top, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0) 100%)
+                // background: -webkit-linear-gradient(top, rgba(0,0,0,0.70) 0%,rgba(0,0,0,0) 100%)
+                // background: linear-gradient(to bottom, rgba(0,0,0,0.70) 0%,rgba(0,0,0,0) 100%)
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )
+
+                img
+                  width: 40px
+                  height: 40px
+                  position: relative
+                  float: left
+
+                br
+                  line-height: 5px
+                  display: block
+                  margin: 10px 0
+
+                .info-text-author
+                  font-size: 14px
+                  position: relative
+                  float: right
+                  color: black
+                  margin: 6px
+
+                  .pseudo-author
+                    font-size: 12px
+
+        .img-col-wrapper
+            display: inline-block
+            vertical-align: middle
+            margin-left: 0
+
+            .img-col-round
+                display: block
+                background: center center
+                background-size: cover
+
+        .ref
+            padding-left: 0
+            margin-top: -40px
+            position: relative
+
+            .img-col-wrapper .img-col-round
+                margin-left: 10px
+                height: 75px
+                width: 75px
+                +border-radius(38px)
+
+            .info-col-wrapper
+                display: inline-block
+                vertical-align: middle
+                // width: ~'calc(100% - 90px)'
+                overflow: hidden
+
+                h2
+                    background: transparent
+                    padding: 5px
+                    margin-left: 10px
+
+                    &.info-referent
+                        display: block
+                        text-align: left
+                        color: white
+                        width: 100%
+                        overflow: hidden
+                        -ms-text-overflow: ellipsis
+                        -o-text-overflow: ellipsis
+                        text-overflow: ellipsis
+                        height: 29px
+                        white-space: nowrap
+
+                    &.info-date
+                        display: block
+                        color: black
+                        text-align: left
+
+        .detail
+            color: #777
+            padding: 10px
+            line-height: 1.5
+            font-family: 'Roboto', sans-serif
+            margin: 0
+
+        ul
+            overflow-x: hidden
+            overflow-y: auto
+            padding-left: 10px
+            list-style-type: none
+            margin-top: 0px
+            margin-bottom: 0
+            height: 274px
+
+            li
+                margin-top: 3px
+                padding: 2px
+                border-bottom: 1px solid #ccc
+
+                .collaborateur
+                    position: relative
+
+                    .img-col-wrapper .img-col-round
+                        height: 50px
+                        width: 50px
+                        +border-radius(25px)
+
+                    .info-col-wrapper
+                        display: inline-block
+                        vertical-align: middle
+                        // width: ~'calc(100% - 60px)'
+
+                        h2
+                            background: transparent
+                            padding: 5px
+                            margin-left: 10px
+
+                            &.info-coll
+                                display: block
+                                text-align: left
+                                color: black
+                                font-size: 14px
+                                font-weight: normal
+
+                            &.info-date
+                                display: block
+                                color: black
+                                text-align: left
+                                font-size: 14px
+
+                    &.demis
+                        background-color: lightyellow
+
+        .info-card
+            > div, > a
+                display: block
+                float: left
+                height: 50px
+                width: 33.3%
+                border-right: 1px solid #CCC
+                text-align: center
+                text-decoration: none
+
+                &:last-child
+                    border-right: 0
+
+                &.nb-consultants
+                    line-height: 50px
+                    font-size: 22px
+                    color: purple
+
+                    & > span
+                        font-size: 18px
+
+                    &.nb-consultants-old
+                        color: #CCC
+
+                &.mail-gps
+                    &:before
+                        content: ""
+                        display: inline-block
+                        width: 0
+                        height: 100%
+                        vertical-align: middle
+
+                    > div
+                        display: inline-block
+                        vertical-align: middle
+                        color: #008cba
+                        width: 90%
+                        max-height: 100%
+
+                        > a
+                            display: block
+                            text-decoration: none
+                            color: #008cba
+
+                        .mail-text
+                            font-size: 10px
+                            word-wrap: break-word
+                            line-height: 10px
+                            display: block
+                            width: 100%
+
+    .layered-content
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: none
+        -webkit-box-align: center
+        -webkit-align-items: center
+        -ms-flex-align: center
+        align-items: center
+        -webkit-box-pack: center
+        -webkit-justify-content: center
+        -ms-flex-pack: center
+        justify-content: center
+        opacity: 0
+        -webkit-transition: all .3s ease
+        -moz-transition: all .3s ease
+        -o-transition: all .3s ease
+        transition: all .3s ease
+        // background: $color1
+        margin-bottom: 50px
+
+        .historique
+            height: 100%
+            padding-top: 70px
+
+            ul
+                height: auto
+                max-height: 100%
+                list-style: none
+                margin: 0
+                padding: 0
+                border: none
+
+                li
+                  html > body #button li a
+                    width: auto
+
+        .content
+            img
+                width: auto
+                height: auto
+                display: block
+                -moz-box-sizing: border-box
+                -webkit-box-sizing: border-box
+                box-sizing: border-box
+                background: white
+                box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4)
+                -webkit-transition: .3s all ease
+                -moz-transition: .3s all ease
+                -o-transition: .3s all ease
+                transition: .3s all ease
+
+            p
+                color: white
+                font-weight: 300
+                text-align: center
+                line-height: 1.5
+                font-family: 'Roboto', sans-serif
+
+                a
+                    font-size: 12px
+                    background: white
+                    color: #ff2670
+                    text-decoration: none
+                    display: inline-block
+                    margin-left: 1.5px
+
+            img, p
+                opacity: 0
+                position: relative
+                top: -7.5px
+
+        &.active
+            opacity: 1
+            width: auto
+            height: auto
+            display: block
+
+            .close-button
+                -webkit-animation: .5s bounceIn
+                -moz-animation: .5s bounceIn
+                -o-animation: .5s bounceIn
+                animation: .5s bounceIn
+
+            .detail
+                position: absolute
+                margin-top: 13%
+
+            .content
+                img
+                    opacity: 1
+                    top: 0
+                    -webkit-transition: .5s all ease .5s
+                    -moz-transition: .5s all ease .5s
+                    -o-transition: .5s all ease .5s
+                    transition: .5s all ease .5s
+
+                p
+                    opacity: 1
+                    top: 0
+                    -webkit-transition: .5s all ease 1s
+                    -moz-transition: .5s all ease 1s
+                    -o-transition: .5s all ease 1s
+                    transition: .5s all ease 1s
+
+        button
+            width: 50px
+            height: 50px
+            border: none
+            +border-radius(50%)
+            cursor: pointer
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4)
+            z-index: 9
+            position: relative

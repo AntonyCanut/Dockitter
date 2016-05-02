@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/layout.min.css')
+    link(rel='stylesheet', href='/components/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/components/simple-sidebar/style.css')
+    script(src="/components/jquery/dist/jquery.min.js")
+    script(src='/components/bootstrap/js/bootstrap.min.js')
+    script(src='/javascripts/layout.js')
+  body.bodyColor
+    block content
+    header
+      div.info-twitter
+        img.img-twitter(src="https://pbs.twimg.com/profile_images/646718302165725184/vBdRZBft.jpg").image-twitter.roundedImage
+        p Antony Canut
+        p 850 Follower
+      h1 DOCKITTER
+        //- div.menuLayout
+        //-   ul(class="nav navbar-nav")
+        //-     li.active
+        //-       a(href="/").menuColor Home
+        //-     li
+        //-       a(href="/about").menuColor About
+        //-     li
+        //-       a(href="/contact").menuColor Contact
+        //-     li
+        //-       a(href="/chat").menuColor Chat
+    .container
+      div#wrapper
+        div#sidebar-wrapper
+          ul.sidebar-nav
+            li.sidebar-brand
+              a(href="#") Home
+            li
+              a(href="#") Configuration
+            li
+              a(href="#") Voir les retweets
+            li
+              a(href="#") Voir les likes
+
+      div
+        .main-content
+          block content
+      //- footer
+      //-   p Site d'evaluation NodeJS
+
+
+              //- .sidebar
+              //-   block sidebar

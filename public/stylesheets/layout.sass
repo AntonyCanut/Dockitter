@@ -1,0 +1,116 @@
+$main-color: #3EB2FF
+$background-color: #CCCB1D
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+body
+  font-family: 'Georgia'
+  background-color: $background-color
+  color: #444
+  margin: 0
+
+.bodyColor
+  background-color: $background-color
+
+header
+  font-family: 'Quicksand'
+  padding: 50px 0px
+  color: #fff
+  font-size: 25px
+  width: 100%
+  z-index: 1002
+  position: fixed
+  height: 200px
+  text-align: center
+  background-color: $main-color
+  border-bottom: 1px solid darken($main-color, 30%)
+  text-shadow: 0px -1px 0px darken($main-color, 30%)
+
+.main-content
+  position: relative
+  margin-left: 250px
+  margin-top: 200px
+
+.NoVisible
+  visibility: hidden
+  font-size: 0px
+
+.menuColor
+  color: white
+
+.container
+  width: 100%
+  overflow: hidden
+
+.info-twitter
+  position: absolute
+  margin-left: 3%
+  float:left
+  display: block
+  height: 120px
+  width: 270px
+  font-size: 18px
+  font-size-adjust: auto
+  text-align: center
+  margin-top: auto
+  margin-bottom: auto
+
+.image-twitter
+  float: left
+
+.menuLayout
+  margin-top: 60px
+
+.roundedImage
+  overflow: hidden
+  +border-radius(50px)
+  width: 90px
+  height: 90px
+
+.main-content
+  position: relative
+
+  p
+    margin-bottom: 20px
+
+.btn-withmargintop
+  margin-top: 6px
+
+.sidebar
+  float: left
+  width: 200px
+
+  .widget
+    border-radius: 3px
+    border: 1px solid #ccc
+    margin-left: 20px
+    background-color: $background-color
+    box-shadow: inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
+
+    h1
+      font-family: 'Quicksand'
+      margin: 13px 10px 4px
+      padding-bottom: 10px
+      border-bottom: 1px dotted #ddd
+      border-radius: 2px 2px 0px 0px
+      margin-bottom: 10px
+
+    p
+      font-size: 13px
+      padding: 0px 10px
+      margin-bottom: 10px
+
+p
+  line-height: 1.8
+
+footer
+  position: relative
+  width: 500px
+  margin: 50px auto
+  border-top: 1px dotted #ccc
+  padding-top: 5px
+  font-size: 13px

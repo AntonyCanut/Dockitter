@@ -1,5 +1,54 @@
 const express = require('express');
 const router = express.Router();
+var Twitter = require('twitter');
+var fs = require('fs');
+var s = require('string');
+
+var accessTokens{
+  consumer_key = "";
+  consumer_secret = "";
+  access_token_key = "";
+  access_token_secret = "";
+};
+
+var tokens = fs.readFileSync('./Configuration/tokens.txt', 'utf8')
+if (s(tokens).contains('\r\n')) {
+    var tab = tokens.split('\r\n').map(function (val) {
+        return val;
+    });
+} else if (s(tokens).contains('\n')) {
+    var tab = tokens.split('\n').map(function (val) {
+        return val;
+    });
+} else {
+    var tab = tokens.split('\r').map(function (val) {
+        return val;
+    });
+}
+
+tab.forEach(function(item){
+  var token = item.split('=').map(function(val){
+    return val;
+  })
+  if(token[0] == 'consumer_key')
+    accessTokens.consumer_key = token[1];
+  else if(token[0] == 'consumer_secret')
+    accessTokens.consumer_secret = token[1];
+  else if(token[0] == 'access_token_key')
+    accessTokens.access_token_key = token[1];
+  else if(token[0] == 'access_token_secret')
+    accessTokens.access_token_secret = token[1];
+})
+
+console.log(accessTokens);
+
+var client = new Twitter({
+    consumer_key: 'todo',
+    consumer_secret: 'todo',
+    access_token_key: 'todo',
+    access_token_secret: 'todo'
+});
+
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Dockitter' });

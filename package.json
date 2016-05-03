@@ -19,7 +19,9 @@
     "express": "~4.13.4",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "string": "^3.3.1",
+    "twitter": "^1.2.5"
   },
   "devDependencies": {
     "electron-prebuilt": "^0.36.9"

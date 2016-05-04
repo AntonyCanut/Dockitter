@@ -1,4 +1,0 @@
-consumer_key=jaskjadkjadkad
-consumer_secret=daslijdlajldjalfjsldfjfaj;ajd;ad
-access_token_key=jsndkjndkjdjn_skjkdnasjndskjandlasdnaldlakdl
-access_token_secret=ldasnaaknfadnasc

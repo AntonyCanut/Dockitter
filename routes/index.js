@@ -1,17 +1,19 @@
 const express = require('express');
 const router = express.Router();
+
 var Twitter = require('twitter');
 var fs = require('fs');
 var s = require('string');
 
-var accessTokens{
-  consumer_key = "";
-  consumer_secret = "";
-  access_token_key = "";
-  access_token_secret = "";
+var accessTokens = {
+  consumer_key: "",
+  consumer_secret: "",
+  access_token_key: "",
+  access_token_secret: ""
 };
 
-var tokens = fs.readFileSync('./Configuration/tokens.txt', 'utf8')
+var tokens = fs.readFileSync('./Configuration/tokensApp.txt', 'utf8');
+tokens += fs.readFileSync('./Configuration/tokensUser.txt', 'utf8');
 if (s(tokens).contains('\r\n')) {
     var tab = tokens.split('\r\n').map(function (val) {
         return val;

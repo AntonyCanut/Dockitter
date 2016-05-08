@@ -45,15 +45,18 @@ tab.forEach(function(item){
 console.log(accessTokens);
 
 var client = new Twitter({
-    consumer_key: 'todo',
-    consumer_secret: 'todo',
-    access_token_key: 'todo',
-    access_token_secret: 'todo'
+    consumer_key: accessTokens.consumer_key,
+    consumer_secret: accessTokens.consumer_secret,
+    access_token_key: accessTokens.access_token_key,
+    access_token_secret: accessTokens.access_token_secret
 });
 
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Dockitter' });
+  client.post('account/update_profile', { }, function(error, tweet, response){
+    res.render('index', { title: 'Dockitter', env: JSON.parse(tweet) });
+  })
+
 });
 
 module.exports = router;

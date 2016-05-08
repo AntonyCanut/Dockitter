@@ -17,6 +17,7 @@ const expressApp = express();
 const debug = require('debug')('express-test:server');
 const http = require('http');
 const port = normalizePort(process.env.PORT || '3000');
+const exec = require('child_process').exec;
 
 var server;
 

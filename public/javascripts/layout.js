@@ -1,1 +1,1 @@
-console.log('log layout.js')
+console.log('bonjour');

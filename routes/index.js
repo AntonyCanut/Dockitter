@@ -56,6 +56,7 @@ var client = new Twitter({
 router.get('/', function(req, res, next) {
   client.post('account/update_profile', { }, function(error, tweet, response){
     tweet.status.source = "";
+    tweet.status.retweeted_status.source = "";
     var data = jsonString.create(tweet);
     res.render('index', { title: 'Dockitter', viewModel: data });
   })

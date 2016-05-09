@@ -27,11 +27,7 @@ block content
           p
             | Des details
             | Plus de details
-  //- -- env = #{env}
-  script.
-    var env = "#{env}";
-    var host = "#{JSON.stringify(env)}";
-    var test = "#{JSON.stringify(env)}";
-    //- test.replaceAll('&quot;', '\'')
-    //- var test2 = JSON.parse(test);
+
+  script(type='text/javascript').
+    var viewModel = '!{viewModel}';
   script(src="/javascripts/app.js")

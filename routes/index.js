@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const jsonString = require('jsonstring');
 
 var Twitter = require('twitter');
 var fs = require('fs');
@@ -54,7 +55,9 @@ var client = new Twitter({
 
 router.get('/', function(req, res, next) {
   client.post('account/update_profile', { }, function(error, tweet, response){
-    res.render('index', { title: 'Dockitter', env: JSON.parse(tweet) });
+    tweet.status.source = "";
+    var data = jsonString.create(tweet);
+    res.render('index', { title: 'Dockitter', viewModel: data });
   })
 
 });

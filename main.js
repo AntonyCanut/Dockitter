@@ -67,7 +67,7 @@ function onListening() {
   debug('Listening on ' + bind);
 
   mainWindow.loadURL('http://127.0.0.1:3000');
-  //mainWindow.toggleDevTools();
+  mainWindow.toggleDevTools();
 }
 
 var mainWindow = null;

@@ -30,4 +30,9 @@ block content
 
   script(type='text/javascript').
     var viewModel = '!{viewModel}';
+  script(type='text/x-handlebars-template')#templatetest
+    {{#each test}}
+    div
+      span
+    {{/each}}
   script(src="/javascripts/index.js")

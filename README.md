@@ -1,7 +1,11 @@
 # Dockitter
 And if you have a bot for tweet, retweet and like ? TwitScript is for you. But if you want see result, this project is for you.
 
-Please download and run **npm install && npm start**
+You need Bower :
+
+    npm install -g bower
+
+Please download and run **npm install && bower install && npm start**
 
 Work with :
 
@@ -13,4 +17,5 @@ Work with :
 * [ExpressJS](http://expressjs.com/fr/)
 * [SASS](http://sass-lang.com/)
 * [Pug](https://github.com/pugjs/pug)
-* [Jade-Query](https://github.com/charlieamer/jade-query)
+* [Jade](https://github.com/jadejs/jade)
+* [JQuery](https://jquery.com/)

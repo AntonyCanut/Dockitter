@@ -1,15 +1,15 @@
 {
-  "name": "electron-with-express",
+  "name": "dockitter",
   "description": "Demonstrates spawning Express from Electron and using it to serve content",
   "version": "0.0.1",
   "main": "main.js",
   "authors": [
-    "Frank Hale <frankhale@gmail.com>"
+    "Antony Canut <canut42@gmail.com>"
   ],
-  "license": "GPL-3.0",
+  "license": "",
   "private": true,
   "scripts": {
-    "start": "node ./start-electron.js" 
+    "start": "node ./start-electron.js"
   },
   "dependencies": {
     "body-parser": "~1.15.0",

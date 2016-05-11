@@ -3,7 +3,22 @@ extends layout
 
 block content
   link(rel='stylesheet', href='/stylesheets/index/style.min.css')
-  div.panel.suivi-gps
+
+  script#panel-card-div.
+    if viewModel.tweet
+      div.card
+        div.img-wrapper
+          div.card-author
+            img(src="https://pbs.twimg.com/profile_images/646718302165725184/vBdRZBft.jpg")
+            div.info-text-author
+              div.name-author Antony Canut
+              div.pseudo-author @AntonyCanut
+          div.data-tweet
+            p
+              | Des details
+              | Plus de details
+
+  div#container-card.panel.suivi-gps
     div.card
       div.img-wrapper
         div.card-author
@@ -30,9 +45,4 @@ block content
 
   script(type='text/javascript').
     var viewModel = '!{viewModel}';
-  script(type='text/x-handlebars-template')#templatetest
-    {{#each test}}
-    div
-      span
-    {{/each}}
   script(src="/javascripts/index.js")

@@ -60,7 +60,10 @@ router.get('/', function(req, res, next) {
     var data = jsonString.create(tweet);
     res.render('index', { title: 'Dockitter', viewModel: data });
   })
+});
 
+router.get('/tweets', function(req, res, next) {
+  res.send({message: 'test'});
 });
 
 module.exports = router;

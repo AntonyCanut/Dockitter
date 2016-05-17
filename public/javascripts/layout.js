@@ -4,4 +4,7 @@ $(document).ready(function() {
   }
   viewModel = viewModel.replaceAll('\n', '');
   viewModel = JSON.parse(viewModel);
+  viewModel.profile_image_url = viewModel.profile_image_url.replaceAll('_normal', '');
+  var html = jade.render($("#header-jade").text())
+  $("#header").html(html);
 });

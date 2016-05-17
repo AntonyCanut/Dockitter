@@ -12,12 +12,7 @@ html
     script(src='/javascripts/layout.js')
   body.bodyColor
     block content
-    header
-      div.info-twitter
-        img.img-twitter(src="https://pbs.twimg.com/profile_images/646718302165725184/vBdRZBft.jpg").image-twitter.roundedImage
-        p#UserName Antony Canut
-        p 850 Follower
-      h1 DOCKITTER
+    header#header
     .container
       div#wrapper
         div#sidebar-wrapper
@@ -34,6 +29,14 @@ html
       div
         .main-content
           block content
+
+      script#header-jade.
+        div.info-twitter
+          img.img-twitter(src=viewModel.profile_image_url).image-twitter.roundedImage
+          p#UserName= viewModel.name
+          p= 'Abonnements/Abonnés : ' + viewModel.friends_count + '/' + viewModel.followers_count
+
+        h1 DOCKITTER
       //- footer
       //-   p Site d'evaluation NodeJS
 
